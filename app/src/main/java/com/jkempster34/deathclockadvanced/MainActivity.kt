@@ -1,4 +1,4 @@
-package com.example.deathclockadvanced
+package com.jkempster34.deathclockadvanced
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
