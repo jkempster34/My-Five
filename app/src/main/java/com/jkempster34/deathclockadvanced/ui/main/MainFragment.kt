@@ -6,14 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.jkempster34.deathclockadvanced.R
 import com.jkempster34.deathclockadvanced.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
-    private val viewModel = MainViewModel()
+    private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
