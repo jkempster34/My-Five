@@ -5,7 +5,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.jkempster34.deathclockadvanced.data.User
 import javax.inject.Inject
 
-class DefaultAuthRepository : AuthRepository {
+class DefaultAuthRepository @Inject constructor() : AuthRepository {
     private val firebaseAuth = FirebaseAuth.getInstance()
 
     override fun getCurrentUser(): User? {
