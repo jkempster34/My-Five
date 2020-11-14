@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.jkempster34.deathclockadvanced.R
 import com.google.firebase.auth.FirebaseAuth
 import com.jkempster34.deathclockadvanced.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,7 +21,9 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding.fragment = this
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
