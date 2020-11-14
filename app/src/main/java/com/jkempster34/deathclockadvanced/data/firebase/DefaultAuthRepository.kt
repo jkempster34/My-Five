@@ -3,7 +3,10 @@ package com.jkempster34.deathclockadvanced.data.firebase
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.*
+import com.google.firebase.auth.AuthCredential
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.jkempster34.deathclockadvanced.data.User
 import javax.inject.Inject
 

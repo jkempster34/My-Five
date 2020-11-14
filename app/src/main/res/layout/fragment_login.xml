@@ -5,14 +5,12 @@
 
     <data>
 
-
         <variable
             name="fragment"
             type="com.jkempster34.deathclockadvanced.ui.login.LoginFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.login.LoginFragment">

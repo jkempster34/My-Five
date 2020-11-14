@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -92,7 +93,13 @@ class LoginFragment : Fragment() {
 //                createNewUser(authenticatedUser)
 //            } else {
             Log.i(TAG, "Successfully signed in user ${authenticatedUser.email}")
+            navigateToMainFragment()
         }
+    }
+
+    private fun navigateToMainFragment() {
+        val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()
+        findNavController().navigate(action)
     }
 
     companion object {

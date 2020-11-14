@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.jkempster34.deathclockadvanced.R
+import com.google.firebase.auth.FirebaseAuth
 import com.jkempster34.deathclockadvanced.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,6 +33,12 @@ class MainFragment : Fragment() {
         val authenticationState = viewModel.isUserAuthenticated()
         if (authenticationState == MainViewModel.AuthenticationState.UNAUTHENTICATED)
             navigateToLoginFragment()
+    }
+
+    fun signOut() {
+        val mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
+        navigateToLoginFragment()
     }
 
     private fun navigateToLoginFragment() {
