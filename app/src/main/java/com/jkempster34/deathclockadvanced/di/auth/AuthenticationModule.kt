@@ -1,7 +1,7 @@
-package com.jkempster34.deathclockadvanced.di
+package com.jkempster34.deathclockadvanced.di.auth
 
-import com.jkempster34.deathclockadvanced.data.firebase.AuthRepository
-import com.jkempster34.deathclockadvanced.data.firebase.DefaultAuthRepository
+import com.jkempster34.deathclockadvanced.data.auth.AuthRepository
+import com.jkempster34.deathclockadvanced.data.auth.DefaultAuthRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

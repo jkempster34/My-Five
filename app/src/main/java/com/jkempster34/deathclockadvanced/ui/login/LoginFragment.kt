@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel.AuthenticationState.*
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -16,13 +17,14 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 import com.jkempster34.deathclockadvanced.databinding.FragmentLoginBinding
+import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
-
-    private val viewModel: LoginViewModel by viewModels()
+    private val authStateViewModel: AuthStateViewModel by viewModels()
+    private val loginViewModel: LoginViewModel by viewModels()
     private lateinit var binding: FragmentLoginBinding
 
     @Inject
@@ -35,6 +37,25 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.fragment = this
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        observeAuthenticationState()
+    }
+
+    private fun observeAuthenticationState() {
+        authStateViewModel.authenticationState.observe(viewLifecycleOwner, { authenticationState ->
+            when (authenticationState) {
+                AUTHENTICATED -> {
+                    Log.i(TAG, "Authenticated")
+                    // TODO: Get user, if new show onboarding
+                    navigateToMainFragment()
+                }
+                UNAUTHENTICATED -> {
+                    Log.i(TAG, "Unauthenticated")
+                }
+            }
+        })
     }
 
     enum class RequestCodes(val value: Int) {
@@ -57,6 +78,7 @@ class LoginFragment : Fragment() {
             } catch (error: ApiException) {
                 Log.w(TAG, "Google sign in failed", error)
             }
+            // TODO:
 //        } else if (requestCode == FACEBOOK_LOG_IN_REQUEST_CODE) {
 //            mFacebookCallbackManager.onActivityResult(requestCode, resultCode, data)
 //        } else if (requestCode == TWITTER_LOG_IN_REQUEST_CODE) {
@@ -71,15 +93,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun signInWithGoogleAuthCredential(googleAuthCredential: AuthCredential) {
-        viewModel.signInWithGoogle(googleAuthCredential)
-        viewModel.authenticatedUserLiveData.observe(this) { authenticatedUser ->
-//            if (authenticatedUser.isNew) {
-//                createNewUser(authenticatedUser)
-//            } else {
-            Log.i(TAG, "Successfully signed in user ${authenticatedUser.email}")
-            navigateToMainFragment()
-        }
+        loginViewModel.signInWithGoogle(googleAuthCredential)
     }
+
 
     private fun navigateToMainFragment() {
         val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()

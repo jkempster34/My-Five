@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.AuthCredential
 import com.jkempster34.deathclockadvanced.data.User
-import com.jkempster34.deathclockadvanced.data.firebase.AuthRepository
+import com.jkempster34.deathclockadvanced.data.auth.AuthRepository
 
 
 class LoginViewModel @ViewModelInject constructor(

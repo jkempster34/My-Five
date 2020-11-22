@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.data.firebase
+package com.jkempster34.deathclockadvanced.data.auth
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -45,6 +45,10 @@ class DefaultAuthRepository @Inject constructor() : AuthRepository {
                 }
             }
         return authenticatedUserMutableLiveData
+    }
+
+    override fun signOut() {
+        firebaseAuth.signOut();
     }
 
     companion object {

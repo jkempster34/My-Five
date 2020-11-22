@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.di
+package com.jkempster34.deathclockadvanced.di.auth
 
 import android.content.Context
 import com.google.android.gms.auth.api.signin.GoogleSignIn
