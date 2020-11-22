@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.jkempster34.deathclockadvanced"
+        applicationId "com.jkempster34.myfive"
         minSdkVersion 22
         targetSdkVersion 30
         versionCode 1

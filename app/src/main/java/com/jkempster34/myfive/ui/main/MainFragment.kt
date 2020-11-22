@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.ui.main
+package com.jkempster34.myfive.ui.main
 
 import android.os.Bundle
 import android.util.Log
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.jkempster34.deathclockadvanced.databinding.FragmentMainBinding
-import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel
-import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel.AuthenticationState.*
+import com.jkempster34.myfive.databinding.FragmentMainBinding
+import com.jkempster34.myfive.ui.AuthStateViewModel
+import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -6,15 +6,15 @@
     <data>
 
         <import type="android.view.View" />
-        <import type="com.jkempster34.deathclockadvanced.ui.AuthStateViewModel.AuthenticationState" />
+        <import type="com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState" />
 
         <variable
             name="authStateViewmodel"
-            type="com.jkempster34.deathclockadvanced.ui.AuthStateViewModel" />
+            type="com.jkempster34.myfive.ui.AuthStateViewModel" />
 
         <variable
             name="fragment"
-            type="com.jkempster34.deathclockadvanced.ui.main.MainFragment" />
+            type="com.jkempster34.myfive.ui.main.MainFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

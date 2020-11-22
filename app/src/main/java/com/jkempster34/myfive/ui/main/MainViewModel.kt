@@ -1,8 +1,8 @@
-package com.jkempster34.deathclockadvanced.ui.main
+package com.jkempster34.myfive.ui.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.jkempster34.deathclockadvanced.data.auth.AuthRepository
+import com.jkempster34.myfive.data.auth.AuthRepository
 
 class MainViewModel @ViewModelInject constructor(
     private var authRepository: AuthRepository,

@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.ui.login
+package com.jkempster34.myfive.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel.AuthenticationState.*
+import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.*
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -16,8 +16,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
-import com.jkempster34.deathclockadvanced.databinding.FragmentLoginBinding
-import com.jkempster34.deathclockadvanced.ui.AuthStateViewModel
+import com.jkempster34.myfive.databinding.FragmentLoginBinding
+import com.jkempster34.myfive.ui.AuthStateViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

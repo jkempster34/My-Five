@@ -1,15 +1,15 @@
-package com.jkempster34.deathclockadvanced.ui
+package com.jkempster34.myfive.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.jkempster34.deathclockadvanced.R
+import com.jkempster34.myfive.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DeathClockActivity : AppCompatActivity() {
+class MyFiveActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.Theme_DeathClockAdvanced)
+        setTheme(R.style.Theme_MyFive)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_deathclock)
+        setContentView(R.layout.activity_myfive)
     }
 }

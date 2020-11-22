@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.jkempster34.deathclockadvanced.ui.main.MainFragment"
+        android:name="com.jkempster34.myfive.ui.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main"
         >
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.jkempster34.deathclockadvanced.ui.login.LoginFragment"
+        android:name="com.jkempster34.myfive.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action

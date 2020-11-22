@@ -1,6 +1,6 @@
-package com.jkempster34.deathclockadvanced.di.auth
+package com.jkempster34.myfive.di.auth
 
-import com.jkempster34.deathclockadvanced.data.auth.AuthStateLiveData
+import com.jkempster34.myfive.data.auth.AuthStateLiveData
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

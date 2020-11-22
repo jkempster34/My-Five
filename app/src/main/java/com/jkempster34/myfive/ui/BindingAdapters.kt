@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.ui
+package com.jkempster34.myfive.ui
 
 import androidx.databinding.BindingAdapter
 import com.google.android.gms.common.SignInButton

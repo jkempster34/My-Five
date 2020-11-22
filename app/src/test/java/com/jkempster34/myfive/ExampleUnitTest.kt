@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced
+package com.jkempster34.myfive
 
 import org.junit.Test
 

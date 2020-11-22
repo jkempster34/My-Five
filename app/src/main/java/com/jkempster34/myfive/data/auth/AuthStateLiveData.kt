@@ -1,9 +1,9 @@
-package com.jkempster34.deathclockadvanced.data.auth
+package com.jkempster34.myfive.data.auth
 
 import androidx.lifecycle.LiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.jkempster34.deathclockadvanced.data.User
+import com.jkempster34.myfive.data.User
 
 class AuthStateLiveData : LiveData<User?>() {
     private val firebaseAuth = FirebaseAuth.getInstance()

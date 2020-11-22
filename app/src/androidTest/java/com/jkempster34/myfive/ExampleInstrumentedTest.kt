@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced
+package com.jkempster34.myfive
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.deathclockadvanced", appContext.packageName)
+        assertEquals("com.jkempster34.myfive", appContext.packageName)
     }
 }

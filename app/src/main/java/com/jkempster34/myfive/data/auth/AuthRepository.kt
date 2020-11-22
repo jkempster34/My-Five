@@ -1,8 +1,8 @@
-package com.jkempster34.deathclockadvanced.data.auth
+package com.jkempster34.myfive.data.auth
 
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.AuthCredential
-import com.jkempster34.deathclockadvanced.data.User
+import com.jkempster34.myfive.data.User
 
 interface AuthRepository {
     fun getCurrentUser(): User?

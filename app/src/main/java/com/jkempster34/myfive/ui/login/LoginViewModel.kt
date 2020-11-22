@@ -1,11 +1,11 @@
-package com.jkempster34.deathclockadvanced.ui.login
+package com.jkempster34.myfive.ui.login
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.AuthCredential
-import com.jkempster34.deathclockadvanced.data.User
-import com.jkempster34.deathclockadvanced.data.auth.AuthRepository
+import com.jkempster34.myfive.data.User
+import com.jkempster34.myfive.data.auth.AuthRepository
 
 
 class LoginViewModel @ViewModelInject constructor(

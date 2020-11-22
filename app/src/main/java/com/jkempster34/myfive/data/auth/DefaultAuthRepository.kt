@@ -1,4 +1,4 @@
-package com.jkempster34.deathclockadvanced.data.auth
+package com.jkempster34.myfive.data.auth
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.jkempster34.deathclockadvanced.data.User
+import com.jkempster34.myfive.data.User
 import javax.inject.Inject
 
 class DefaultAuthRepository @Inject constructor() : AuthRepository {

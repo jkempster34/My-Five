@@ -1,7 +1,7 @@
-package com.jkempster34.deathclockadvanced.di.auth
+package com.jkempster34.myfive.di.auth
 
-import com.jkempster34.deathclockadvanced.data.auth.AuthRepository
-import com.jkempster34.deathclockadvanced.data.auth.DefaultAuthRepository
+import com.jkempster34.myfive.data.auth.AuthRepository
+import com.jkempster34.myfive.data.auth.DefaultAuthRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

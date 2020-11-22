@@ -1,10 +1,10 @@
-package com.jkempster34.deathclockadvanced.di.auth
+package com.jkempster34.myfive.di.auth
 
 import android.content.Context
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.jkempster34.deathclockadvanced.R
+import com.jkempster34.myfive.R
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,10 +1,9 @@
-package com.jkempster34.deathclockadvanced.ui
+package com.jkempster34.myfive.ui
 
-import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
-import com.jkempster34.deathclockadvanced.data.auth.AuthStateLiveData
+import com.jkempster34.myfive.data.auth.AuthStateLiveData
 
 class AuthStateViewModel @ViewModelInject constructor(
     authStateLiveData: AuthStateLiveData
