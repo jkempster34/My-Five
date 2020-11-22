@@ -5,6 +5,13 @@
 
     <data>
 
+        <import type="android.view.View" />
+        <import type="com.jkempster34.deathclockadvanced.ui.AuthStateViewModel.AuthenticationState" />
+
+        <variable
+            name="authStateViewmodel"
+            type="com.jkempster34.deathclockadvanced.ui.AuthStateViewModel" />
+
         <variable
             name="fragment"
             type="com.jkempster34.deathclockadvanced.ui.main.MainFragment" />
@@ -21,6 +28,7 @@
             android:layout_height="wrap_content"
             android:onClick="@{() -> fragment.signOut()}"
             android:text="@string/sign_out"
+            android:visibility="@{authStateViewmodel.authenticationState == AuthenticationState.AUTHENTICATED ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

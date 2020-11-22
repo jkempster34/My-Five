@@ -25,6 +25,8 @@ class MainFragment : Fragment() {
     ): View? {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         binding.fragment = this
+        binding.authStateViewmodel = authStateViewModel
+        binding.lifecycleOwner = this
         return binding.root
     }
 
