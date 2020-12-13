@@ -1,20 +1,15 @@
 package com.jkempster34.myfive.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.jkempster34.myfive.databinding.FragmentMainBinding
 import com.jkempster34.myfive.ui.AuthStateViewModel
-import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.*
-import dagger.hilt.android.AndroidEntryPoint
+import com.jkempster34.myfive.ui.BaseFragment
 
-@AndroidEntryPoint
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment() {
     private val authStateViewModel: AuthStateViewModel by viewModels()
     private val mainViewModel: MainViewModel by viewModels()
     private lateinit var binding: FragmentMainBinding
@@ -30,31 +25,11 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        observeAuthenticationState()
-    }
-
-    private fun observeAuthenticationState() {
-        authStateViewModel.authenticationState.observe(viewLifecycleOwner, { authenticationState ->
-            when (authenticationState) {
-                AUTHENTICATED -> {
-                    Log.i(TAG, "Authenticated")
-                }
-                UNAUTHENTICATED -> {
-                    Log.i(TAG, "Unauthenticated")
-                    navigateToLoginFragment()
-                }
-            }
-        })
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {}
 
     fun signOut() {
         mainViewModel.signOut()
-    }
-
-    private fun navigateToLoginFragment() {
-        val action = MainFragmentDirections.actionMainFragmentToLoginFragment()
-        findNavController().navigate(action)
+        navigateToFragment(MainFragmentDirections.actionMainFragmentToLoginFragment())
     }
 
     companion object {

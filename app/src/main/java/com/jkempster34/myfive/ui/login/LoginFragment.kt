@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.*
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -18,10 +17,10 @@ import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 import com.jkempster34.myfive.databinding.FragmentLoginBinding
 import com.jkempster34.myfive.ui.AuthStateViewModel
-import dagger.hilt.android.AndroidEntryPoint
+import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.AUTHENTICATED
+import com.jkempster34.myfive.ui.AuthStateViewModel.AuthenticationState.UNAUTHENTICATED
 import javax.inject.Inject
 
-@AndroidEntryPoint
 class LoginFragment : Fragment() {
     private val authStateViewModel: AuthStateViewModel by viewModels()
     private val loginViewModel: LoginViewModel by viewModels()

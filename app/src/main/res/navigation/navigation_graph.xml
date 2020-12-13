@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/splashFragment">
+    <fragment
+    android:id="@+id/splashFragment"
+    android:name="com.jkempster34.myfive.ui.splash.SplashFragment"
+    android:label="splash_fragment"
+    tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.jkempster34.myfive.ui.main.MainFragment"
@@ -23,4 +35,10 @@
             android:id="@+id/action_loginFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.jkempster34.myfive.ui.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" />
+
 </navigation>
